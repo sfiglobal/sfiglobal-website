@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rent Now Button</title>
+</head>
+<body>
+    <button id="rentNowBtn">Rent Now</button>
+
+    <script>
+        document.getElementById('rentNowBtn').addEventListener('click', function() {
+            var customerName = prompt('Please enter your name:');
+            var customerAddress = prompt('Please enter your address:');
+            var customerEmail = prompt('Please enter your email:');
+
+            var message = 'Customer Details:\nName: ' + customerName + '\nAddress: ' + customerAddress + '\nEmail: ' + customerEmail;
+            sendWhatsAppMessage(message);
+        });
+
+        function sendWhatsAppMessage(message) {
+            // Replace 'YOUR_PHONE_NUMBER' with your own WhatsApp number
+            var phoneNumber = '+94769359433';
+            var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURI(message);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

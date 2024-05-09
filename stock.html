@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Details</title>
+    <style>
+        .stock-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .stock-image {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        .stock-details {
+            flex: 1;
+        }
+
+        .stock-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stock-price {
+            color: green;
+            font-size: 1.2em;
+        }
+
+        .stock-quantity {
+            font-style: italic;
+        }
+
+        .print-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="m-0 text-uppercase text-primary">STOCK DEATILS SFI GLOBAL(M)SDN.BHD</h1>
+
+    <div class="stock-container">
+        <img class="stock-image" src="img/Petro1.jpg" alt="Stock Image">
+        <div class="stock-details">
+            <div class="stock-name">7014 Petromin Engine Oil Mineral 10W30 Petromax Mineral API SN</div>
+            <div class="stock-price">3L - RM 85.00 </div>
+            <div class="stock-price">Avilable </div>
+            <div class="stock-quantity">In Stock Units: 112 Box Per Box 6 CTN</div>
+        </div>
+    </div>
+
+    <div class="stock-container">
+        <img class="stock-image" src="img/petro2.jpeg" alt="Stock Image">
+        <div class="stock-details">
+            <div class="stock-name">6012 Petromin Engine Oil Mineral 15W40 Mineral Fleet Master Plus CI-4</div>
+            <div class="stock-price">7.5L - RM 175.00 </div>
+            <div class="stock-price">Avilable </div>
+            <div class="stock-quantity">In Stock Units: 246 Box</div>
+        </div>
+    </div>
+
+    <div class="stock-container">
+        <img class="stock-image" src="img/petro4.webp" alt="Stock Image">
+        <div class="stock-details">
+            <div class="stock-name">PETROMIN ATF DEXRON III 1L</div>
+            <div class="stock-price">1L - RM 28.00 </div>
+            <div class="stock-price">Avilable </div>
+            <div class="stock-quantity">In Stock Units: 193 Box Per Box 12 CTN (one bottle minus)</div>
+        </div>
+    </div>
+
+    <div class="stock-container">
+        <img class="stock-image" src="img/petro3.jpg" alt="Stock Image">
+        <div class="stock-details">
+            <div class="stock-name"> 8011 Petromin Engine Oil Semi 5W30 SynthomiX Semi API SN </div>
+            <div class="stock-price">4L - RM 165.00 </div>
+            <div class="stock-price">Avilable </div>
+            <div class="stock-quantity">In Stock Units: 160  Box Per Box 4 CTN</div>
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()">Print</button>
+    <button class="print-button" onclick="generatePDF()">Download PDF</button>
+
+</body>
+</html>

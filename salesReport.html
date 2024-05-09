@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Report</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details p {
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .print-button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #45a049;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Sales Report SFI GLOBAL(M)SDN.BHD</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Instock</th>
+                <th>Total Sales</th>
+                <th>Avilable Stock</th>
+                <th>Total  Sales Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7014 Petromin Engine Oil Mineral 10W30 Petromax Mineral API SN</td>
+                <td>112 CTN</td>
+                <td>0</td>
+                <td>112</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>6012 Petromin Engine Oil Mineral 15W40 Mineral Fleet Master Plus CI-4</td>
+                <td>296 BOX</td>
+                <td>0</td>
+                <td>296</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>6012 PETROMIN ATF DEXRON III 1L</td>
+                <td>200 CTN </td>
+                <td>0</td>
+                <td>200</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>8011 Petromin Engine Oil Semi 5W30 SynthomiX Semi API SN </td>
+                <td>210 CTN</td>
+                <td>50</td>
+                <td>160</td>
+                <td>RM 11,200.00</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;"><strong>Total Sales:</strong></td>
+                <td>RM 11,200.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button class="print-button" onclick="window.print()">Print Report</button>
+    <a href="invoice.html" target="_blank">
+        <button class ="print-button" >Back</button>
+</body>
+</html>

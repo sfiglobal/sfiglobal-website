@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Details CRUD</title>
+    <style>
+        .customer-item {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .gmail {
+            background-color: #f1c40f;
+        }
+
+        .yahoo {
+            background-color: #3498db;
+        }
+
+        .default {
+            background-color: #ecf0f1;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Details</h1>
+    <form id="customerForm">
+        <label for="name">Company Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="address">Company Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="email">Company Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Company Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <button type="submit">Add Customer</button>
+        <button type="Delete">delete Customer</button>
+    </form>
+
+    <h2>Customer List</h2>
+    <table id="customerTable">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Company Address</th>
+                <th>Company Email</th>
+                <th>Company Phone</th>
+            </tr>
+        </thead>
+        <tbody id="customerList"></tbody>
+    </table>
+
+    <script>
+        document.getElementById('customerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            // Save the customer details to local storage
+            var customers = JSON.parse(localStorage.getItem('customers')) || [];
+            customers.push({ name: name, address: address, email: email, phone: phone });
+            localStorage.setItem('customers', JSON.stringify(customers));
+
+            // Refresh the customer list
+            displayCustomers();
+        });
+
+        function displayCustomers() {
+            var customers = JSON.parse(localStorage.getItem('customers')) || [];
+            var table = document.getElementById('customerList');
+            table.innerHTML = '';
+
+            customers.forEach(function(customer) {
+                var row = table.insertRow();
+                row.innerHTML = `
+                    <td>${customer.name}</td>
+                    <td>${customer.address}</td>
+                    <td>${customer.email}</td>
+                    <td>${customer.phone}</td>
+                `;
+
+                // Add dynamic CSS class based on email domain
+                var domain = customer.email.split('@')[1];
+                if (domain === 'gmail.com') {
+                    row.classList.add('gmail');
+                } else if (domain === 'yahoo.com') {
+                    row.classList.add('yahoo');
+                } else {
+                    row.classList.add('default');
+                }
+            });
+        }
+
+        // Display existing customers on page load
+        displayCustomers();
+    </script>
+</body>
+</html>

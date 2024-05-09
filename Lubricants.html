@@ -56,6 +56,18 @@
         .order-button:hover {
             background-color: #0056b3;
         }
+        .order2-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .order2-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -111,10 +123,22 @@
 </div>
 
 
+
+<button class="order2-button">View Avilable Stock Deatils</button>
+
     <script>
         document.querySelectorAll('.order-button').forEach(button => {
             button.addEventListener('click', () => {
                 window.location.href = ' https://wa.me/qr/IGTT64LB7OW3A1';
+            });
+        });
+        
+    </script>
+    
+    <script>
+        document.querySelectorAll('.order2-button').forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = "password.html";
             });
         });
         
