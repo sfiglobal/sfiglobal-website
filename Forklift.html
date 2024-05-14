@@ -61,6 +61,19 @@
             max-width: 100%;
             height: auto;
         }
+        .order-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -71,19 +84,19 @@
     <section>
         <div class="container">
             <h2>Rentals</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lectus eros. Phasellus ut
-                fermentum est. Proin sed est vitae justo placerat commodo.</p>
+            <p>we are renting forklift for monthly rate electric and disel forklifts Mitsubishi Engine</p>
             <img src="img/Forklift.jpg" alt="Forklift Rental Image" class="image">
             <h3>Rental Rates</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lectus eros. Phasellus ut
-                fermentum est. Proin sed est vitae justo placerat commodo.</p>
+            <p>FB25-N1LZ1:2.5T LI Ion Eletric Forklift -Monthly   RM2700 </p>
+            <p>FGL35T-NJK1:3.5T Gasolin/LPG Forklift -  Monthly   RM4000 </p>
+            <p>FB35- N1LZ1:3.5T Li-Ion forklift -       Monthly   RM4000 </p>
+            <p>FGL35T-NJK1:3.5T Gasolin/LPG Forklift -  Monthly   RM4000 </p>
+            <p>FD50T-XNJM2:Mini 5T Disel Forklift -     Monthly   RM5000 </p>
+            
         </div>
     </section>
     <section style="background-color: #f4f4f4;">
         <div class="container">
-            <h2>Sales</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lectus eros. Phasellus ut
-                fermentum est. Proin sed est vitae justo placerat commodo.</p>
             <img src="img/Forklift.jpg" alt="Forklift Sales Image" class="image">
             <h3>Available Models</h3>
             <ul>
@@ -91,30 +104,19 @@
                 <li>FD50T-XNJM2:Mini 5T Disel Forklift </li>
                 <li>FB25-N1LZ1:2.5T LI Ion Eletric Forklift</li>
                 <li>FGL35T-NJK1:3.5T Gasolin/LPG Forklift</li>
-                <li>Fb</li>
+                <li>FB35- N1LZ1:3.5T Li-Ion forklift</li>
             </ul>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-form">
-                <form action="#" method="post">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" required></textarea><br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-    </section>
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0;">
-        &copy; 2024 Forklift Rental and Sales
-    </footer>
+    <button class="order-button">Contact us</button>
+
+    <script>
+        document.querySelectorAll('.order-button').forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = ' https://wa.me/qr/IGTT64LB7OW3A1';
+            });
+        });
+    </script>
 </body>
 
 </html>
-```
