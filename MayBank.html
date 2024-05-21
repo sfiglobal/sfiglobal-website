@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: rgb(15, 14, 14);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .details {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        .details label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .details p {
+            margin: 0;
+        }
+        .details p:last-child {
+            font-size: 1.2rem;
+        }
+        .details p:first-child {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bank Details</h1>
+    <div class="details">
+        <label for="bank-name">Bank Name</label>
+        <p id="bank-name">MayBank</p>
+    </div>
+    <div class="details">
+        <label for="account-holder">Account Holder Name</label>
+        <p id="account-holder">SFI GLOBAL(M)SDN.BHD</p>
+    </div>
+    <div class="details">
+        <label for="account-number">Account Number</label>
+        <p id="account-number">512781055395</p>
+    </div>
+    <div class="details">
+        <label for="branch">Branch</label>
+        <p id="branch">MayBank Kota Kumuning</p>
+    </div>
+</div>
+
+</body>
+</html>
